@@ -5,7 +5,7 @@ Bichar was mainly inspired by C and BrainFuck (and a few others). However, as yo
 
  - `++` increments the current binary value at the bvar at the pointer			(Similar to C and BF)
  - `--` decrements the current binary value at the bvar at the pointer			(Similar to C and BF)
- - `**` squares the current value												(Similar to FORTRAN)
+ - `**` raises the the current binary value at the bvar at the pointer			(Similar to FORTRAN)
  - `..` outputs the current binary value at the bvar at the pointer				(Similar to BF)
  - `,,` inputs a new binary value at the bvar at the pointer					(Similar to BF)
  - `>>` increments the current binary value of the pointer						(Similar to BF)
@@ -39,7 +39,7 @@ Arithmetic
 |`--`		|`--`												|Decrement curbvar			|`x = x - 1`|
 |`-=`		|`-= [val/add]`										|Subtract value of variable from curbvar		|`x = x - 1`
 |`-x`		|`-x [val/add var] [val/add stor]`					|Place non-absolute difference from curbvar to bvar var in bvar stor|`stor = x - var`|
-|`**`		|`**`												|Square curbvar			|`x = x * x`|
+|`**`		|`** [val/add]`										|Raise curbvar to exponent			|`x = x ^ var`|
 |`*=`		|`*= [val/add]`										|Replace bvar with product of curbvar and variable		|`x = x * var`|
 |`*x`		|`*x [val/add var] [val/add stor]`					|Place product of curbvar and and bvar var in bvar stor|`stor = x * var`|
 
