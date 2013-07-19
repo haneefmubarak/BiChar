@@ -3,16 +3,19 @@ Command List
 
 Bichar was mainly inspired by C and BrainFuck (and a few others). However, as you may have noticed, BiChar doesn't really seem to have been influenced by any language. As such, the main similarities to the above languages is shown below:
 
- - `++` increments the current binary value at the bvar at the pointer			(Similar to C and BF)
- - `--` decrements the current binary value at the bvar at the pointer			(Similar to C and BF)
- - `**` raises the the current binary value at the bvar at the pointer			(Similar to FORTRAN)
- - `..` outputs the current binary value at the bvar at the pointer				(Similar to BF)
- - `,,` inputs a new binary value at the bvar at the pointer					(Similar to BF)
- - `>>` increments the current binary value of the pointer						(Similar to BF)
- - `<<` decrements the current binary value of the pointer						(Similar to BF)
- - `{{` if binary value at pointer == 0, jump --> to matching }}; else skip		(Similar to BF)
- - `}}` if binary value at pointer != 0, jump <-- to matching {{; else skip		(Similar to BF)
- 
+|Command|Function																|Similar to				|Equivalence	|Equivalence Type|
+|-------|-----------------------------------------------------------------------|-----------------------|---------------|----------------|
+|`++`	|increments the current binary value at the bvar at the pointer			|C, BrainFuck			|`x = x + 1`	|Math
+|`--`	|decrements the current binary value at the bvar at the pointer			|C, BrainFuck			|`x = x - 1`	|Math
+|`**`	|raises the the current binary value at the bvar at the pointer			|FORTRAN				|`x = x ^ y`	|Math
+|`..`	|outputs the two char values from the bvar at the pointer				|BrainFuck				|`putchar(x >> 8); putchar(x % 512)`|C
+|`,,`	|inputs a new binary value at the bvar at the pointer					|BrainFuck				|`x = getchar(); x <<= 4; x += getchar()`|C
+|`>>`	|increments the current binary value of the pointer						|BrainFuck				|`pointer = pointer + 1`|Math
+|`<<`	|decrements the current binary value of the pointer						|BrainFuck				|`pointer = pointer - 1`|Math
+|`{{`	|if binary value at pointer == 0, jump --> to matching }}; else skip	|BrainFuck				|`while (x) {`	|C
+|`}}`	|if binary value at pointer != 0, jump <-- to matching {{; else skip	|BrainFuck				|`}`	|C continued from previous command
+
+
 One thing you may have noticed is that some of the above commands seem to be the doubles of the equivalent BrainFuck commands. This is intentional, because in this way, any BrainFuck program can easily be ported to BiChar and then extended.
 
 List of Terms
